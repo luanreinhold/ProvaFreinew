@@ -1,10 +1,12 @@
+import "./index.scss"
 
-
-export default function AcaiPage () {
+export default function libraPage () {
 
     return (
-        <main>
+        <main className="libraPage">
             <h1>Libra</h1>
+
+
         </main>
     )
 }
