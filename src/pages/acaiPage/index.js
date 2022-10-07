@@ -8,12 +8,15 @@ export default function AcaiPage () {
     const [result ,setResult] = useState(0);
 
 
-    function calcularAcai (qtdPeq, qtdMed, qtdGra, desc ) {
-        let soma = (qtdPeq * 13.50 + qtdMed * 15.00 + qtdGra * 17.50) 
-        let totalcomDesc = (soma / 100) * desc
-        return  soma - totalcomDesc
+    function calcularAcai () {
+        const soma = qtdPeq * 13.50 + qtdMed * 15.00 + qtdGra * 17.50 
+        const totalcomDesc = (soma / 100) * desc
+        const resultado = soma - totalcomDesc
+        setResult(resultado)
     }
+  
     // setResult(calcularAcai)
+
     return (
         <main>
             
@@ -22,6 +25,7 @@ export default function AcaiPage () {
             <div>
                 <label>Açais pequenos</label>
                 <input type="number" value={qtdPeq} onChange={e => setQtdPeq(Number(e.target.value))}/>
+        
             </div>
 
             <div>
