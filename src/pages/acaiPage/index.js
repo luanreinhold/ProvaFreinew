@@ -1,11 +1,13 @@
 import { useState } from "react";
 import CompHeader from "../../components/Header";
+
+import './index.scss'
 export default function AcaiPage () {
-    const[qtdPeq, setQtdPeq] = useState(0);
-    const[qtdMed, setQtdMed] = useState(0);
-    const[qtdGra, setQtdGra] = useState(0);
+    const[qtdPeq, setQtdPeq] = useState();
+    const[qtdMed, setQtdMed] = useState();
+    const[qtdGra, setQtdGra] = useState();
     const[desc, setDesc] = useState(0);
-    const [result ,setResult] = useState(0);
+    const [result ,setResult] = useState();
 
 
     function calcularAcai () {
@@ -18,33 +20,36 @@ export default function AcaiPage () {
     // setResult(calcularAcai)
 
     return (
-        <main>
+        <main className="comp-acai">
             <CompHeader/>
-            <h1>Sistema loja de Açai</h1>
+            <div className="box-acai">
+                <h1>Sistema loja de Açai</h1>
 
-            <div>
-                <label>Açais pequenos</label>
-                <input type="number" value={qtdPeq} onChange={e => setQtdPeq(Number(e.target.value))}/>
-        
+                <div className="sla">
+                    <label>Açais pequenos:</label>
+                    <input type="number" value={qtdPeq} onChange={e => setQtdPeq(Number(e.target.value))}/>
+
+                </div>
+
+                <div className="sla">
+                    <label>Açais medios:</label>
+                    <input type="number" value={qtdMed} onChange={e => setQtdMed(Number(e.target.value))}/>
+                </div>
+
+                <div className="sla">
+                    <label>Açai grande:</label>
+                    <input type="number" value={qtdGra} onChange={e => setQtdGra(Number(e.target.value))}/>
+                </div>
+
+                <div className="sla">
+                    <label>Cupom de desconto:</label>
+                    <input type="number" value={desc} onChange={e => setDesc(Number(e.target.value))}/>
+                </div>
+                resultado: {result}
+                <button onClick={calcularAcai}>Calcular</button>
+
             </div>
-
-            <div>
-                <label>Açais grandes</label>
-                <input type="number" value={qtdMed} onChange={e => setQtdMed(Number(e.target.value))}/>
-            </div>
-
-            <div>
-                <label>Açai grande</label>
-                <input type="number" value={qtdGra} onChange={e => setQtdGra(Number(e.target.value))}/>
-            </div>
-
-            <div>
-                <label>Cupom de desconto</label>
-                <input type="number" value={desc} onChange={e => setDesc(Number(e.target.value))}/>
-            </div>
-            {result}
-            <button onClick={calcularAcai}>Calcular</button>
-
+            
         </main>
     )
 }
