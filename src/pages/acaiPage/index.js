@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import CompHeader from "../../components/Header";
 export default function AcaiPage () {
     const[qtdPeq, setQtdPeq] = useState(0);
     const[qtdMed, setQtdMed] = useState(0);
@@ -19,7 +19,7 @@ export default function AcaiPage () {
 
     return (
         <main>
-            
+            <CompHeader/>
             <h1>Sistema loja de Açai</h1>
 
             <div>

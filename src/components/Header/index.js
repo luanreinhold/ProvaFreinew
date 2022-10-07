@@ -1,5 +1,5 @@
-
-export default function compHeader () {
+import "./index.scss"
+export default function CompHeader () {
 
     return (
         <main className="Pageheader">
