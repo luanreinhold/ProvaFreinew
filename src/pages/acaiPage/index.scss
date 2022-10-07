@@ -1,0 +1,44 @@
+.comp-acai{
+    display: flex;
+    flex-direction: column;
+
+
+    .box-acai{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;        
+        background-color: green;
+    }
+    button{
+        padding: 6px;
+        width: 150px;
+        border-radius: 10px;
+    }
+
+    .sla{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+
+    input{
+        width: 150px;
+        padding: 6px;
+        text-decoration: none;
+        border-radius: 10px;
+        border: none;
+    }
+
+    label{
+        margin-right: 10px;
+    }
+
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+}
