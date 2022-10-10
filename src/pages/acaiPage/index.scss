@@ -10,22 +10,24 @@
         align-items: center;
         width: 500px;
         height: 500px;        
-        background-color: green;
+        background-color: rgb(107, 114, 107);
+        border: none;
     }
     button{
         padding: 6px;
-        width: 150px;
+        height: 30px;
+        width: 200px;
         border-radius: 10px;
     }
 
     .sla{
         display: flex;
         flex-direction: column;
-        width: 200px;
+        width: 250px;
     }
 
     input{
-        width: 150px;
+        width: 200px;
         padding: 6px;
         text-decoration: none;
         border-radius: 10px;

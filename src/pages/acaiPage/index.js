@@ -26,13 +26,13 @@ export default function AcaiPage () {
                 <h1>Sistema loja de Açai</h1>
 
                 <div className="sla">
-                    <label>Açais pequenos:</label>
+                    <label>Açai pequenos:</label>
                     <input type="number" value={qtdPeq} onChange={e => setQtdPeq(Number(e.target.value))}/>
 
                 </div>
 
                 <div className="sla">
-                    <label>Açais medios:</label>
+                    <label>Açai medios:</label>
                     <input type="number" value={qtdMed} onChange={e => setQtdMed(Number(e.target.value))}/>
                 </div>
 
@@ -45,8 +45,11 @@ export default function AcaiPage () {
                     <label>Cupom de desconto:</label>
                     <input type="number" value={desc} onChange={e => setDesc(Number(e.target.value))}/>
                 </div>
-                resultado: {result}
-                <button onClick={calcularAcai}>Calcular</button>
+               <div className="sla">
+                    resultado: {result}
+                    <button onClick={calcularAcai}>Calcular</button>
+               </div>
+               
 
             </div>
             
