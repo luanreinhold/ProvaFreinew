@@ -6,6 +6,7 @@ import { useState } from 'react'
 export default function OrcamentoFamiliar(){
     const [ ganhos,  setGanhos] = useState(0)
     const [ gastos, setGastos] = useState(0)
+    const [ resultado, setResultado] = useState("");
     return(
         <main>
             <CompHeader/>
@@ -19,6 +20,7 @@ export default function OrcamentoFamiliar(){
                     <label>Gastos</label>
                     <input type="number"  value={gastos} onChange={e=> setGastos(e.target.value)}/>
                 </div>
+                {resultado}
                 <button>Calcular</button>
             </div>
         </main>
