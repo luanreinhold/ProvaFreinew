@@ -1,0 +1,17 @@
+.page-ingresso{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: end;
+
+    .card-ingresso{
+        width: 500px;
+        height: 400px;
+        background-color: #acb1af;
+
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+}
