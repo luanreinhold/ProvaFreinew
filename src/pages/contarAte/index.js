@@ -13,11 +13,11 @@ export default function ContarAte(){
 
     
     function contarNatural () {
-
+        let arr = []
         for(let i = numeroInicio; i <= numeroFinal; i++) {
-            resposta.push(...resposta )
+            arr.push(i)
+            setResposta(arr , "")
         }
-    
     } 
 
     return(
@@ -35,9 +35,6 @@ export default function ContarAte(){
                 </div>
                 {resposta}
                 <button onClick={contarNatural}>Contar</button>
-                {resposta.map (item =>
-                    <h1> {item} </h1>
-                    )}
             </div>
         </main>
     )
