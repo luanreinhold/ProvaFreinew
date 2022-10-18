@@ -16,7 +16,7 @@ export default function ContarAte(){
         let arr = []
         for(let i = numeroInicio; i <= numeroFinal; i++) {
             arr.push(i)
-            setResposta(arr , "")
+            setResposta(arr , " ")
         }
     } 
 

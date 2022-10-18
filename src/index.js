@@ -12,6 +12,7 @@ import SalarioPage from './pages/salarioPage';
 import IngressoCinema from './pages/ingressoCinema';
 import OrcamentoFamiliar from './pages/orcamentoFamiliar';
 import ContarAte from './pages/contarAte';
+import Desenhar from './pages/linhaAsterisco'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -26,6 +27,7 @@ root.render(
         <Route path="/cinema" element={<IngressoCinema/>}/>
         <Route path="/orcamento" element={<OrcamentoFamiliar/>}/>
         <Route path="/contar" element={<ContarAte/>}/>
+        <Route path="/desenharAsterisco" element={<Desenhar/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,0 +1,9 @@
+.page-asterisco {
+    display: flex;
+    flex-direction: column;
+
+    .box-exercicio {
+        width: 20em;
+        background-color: gray;
+    }
+}
