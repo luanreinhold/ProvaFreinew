@@ -6,8 +6,8 @@ import { useState } from 'react'
 
 
 export default function ContarAte(){
-    const [numeroInicio, setNumeroInicio] = useState(0);
-    const [numeroFinal, setNumeroFinal] = useState(0);
+    const [numeroInicio, setNumeroInicio] = useState();
+    const [numeroFinal, setNumeroFinal] = useState();
     const [resposta, setResposta] = useState([]);
 
 
@@ -15,26 +15,28 @@ export default function ContarAte(){
     function contarNatural () {
         let arr = []
         for(let i = numeroInicio; i <= numeroFinal; i++) {
-            arr.push(i)
-            setResposta(arr , "")
+            arr.push(i + " - ")
+            setResposta(arr)
         }
     } 
 
     return(
-        <main>
+        <main className='comp-cont'>
             <CompHeader/>
-            <div>
-                <h1>Contador</h1>
-                <div>
-                    <label>Numero de inicio da contagem </label>
-                    <input type="number" value={numeroInicio} onChange={e=> setNumeroInicio(Number(e.target.value))}/>
+            <div className='page-card'>
+                <div className='card'>
+                    <h1>Contador</h1>
+                    <div className='box-text'>
+                        <label>Numero de inicio da contagem: </label>
+                        <input type="number" value={numeroInicio} onChange={e=> setNumeroInicio(Number(e.target.value))}/>
+                    </div>
+                    <div className='box-text'>
+                        <label>Numero final: </label>
+                        <input type="number" value={numeroFinal} onChange={e=> setNumeroFinal(Number(e.target.value))}/>
+                    </div>
+                    <div className='resposta'>{resposta}</div>
+                    <button onClick={contarNatural}>Contar</button>
                 </div>
-                <div>
-                    <label>Numero final </label>
-                    <input type="number" value={numeroFinal} onChange={e=> setNumeroFinal(Number(e.target.value))}/>
-                </div>
-                {resposta}
-                <button onClick={contarNatural}>Contar</button>
             </div>
         </main>
     )
