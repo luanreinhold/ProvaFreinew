@@ -8,11 +8,17 @@ import { useState } from 'react'
 export default function ContarAte(){
     const [numeroInicio, setNumeroInicio] = useState(0);
     const [numeroFinal, setNumeroFinal] = useState(0);
-    const [resposta, setResposta] = useState("");
+    const [resposta, setResposta] = useState([]);
 
-    function comeca(){
-        
-    }
+
+    
+    function contarNatural () {
+
+        for(let i = numeroInicio; i <= numeroFinal; i++) {
+            resposta.push(...resposta )
+        }
+    
+    } 
 
     return(
         <main>
@@ -21,14 +27,17 @@ export default function ContarAte(){
                 <h1>Contador</h1>
                 <div>
                     <label>Numero de inicio da contagem </label>
-                    <input type="number" value={numeroInicio} onChange={e=> setNumeroInicio(e.target.value)}/>
+                    <input type="number" value={numeroInicio} onChange={e=> setNumeroInicio(Number(e.target.value))}/>
                 </div>
                 <div>
                     <label>Numero final </label>
-                    <input type="number" value={numeroFinal} onChange={e=> setNumeroFinal(e.target.value)}/>
+                    <input type="number" value={numeroFinal} onChange={e=> setNumeroFinal(Number(e.target.value))}/>
                 </div>
                 {resposta}
-                <button>Contar</button>
+                <button onClick={contarNatural}>Contar</button>
+                {resposta.map (item =>
+                    <h1> {item} </h1>
+                    )}
             </div>
         </main>
     )
