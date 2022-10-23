@@ -13,18 +13,12 @@ export default function SalarioPage () {
     function jokenpo () {
         try {
 
-            let resultado = ''
-
-            JogadorUm.toLowerCase()
-            JogadorDois.toLowerCase()
+            let resultado = 'Jogador Dois Ganhou'
 
             if(!JogadorDois || !JogadorUm) {
                 throw new Error ('Campos não podem ser vazios!')
             }
-            if(JogadorDois || JogadorUm != 'papel' || 'tesoura' || 'pedra' ) {
-                throw new Error ('Digite: Pedra ou Papel ou Tesura')
-            }
-    
+
             if(JogadorUm === 'pedra' && JogadorDois === 'pedra' || JogadorUm === 'tesoura' && JogadorDois === 'tesoura' || JogadorUm === 'papel' && JogadorDois === 'papel') {
                 resultado = 'empate'
             }
@@ -32,9 +26,7 @@ export default function SalarioPage () {
             if(JogadorUm === 'papel' && JogadorDois === 'pedra' || JogadorUm === 'pedra' && JogadorDois === 'tesoura' || JogadorUm === 'tesoura' && JogadorDois === 'papel') {
                 resultado = 'Jogador um ganhou!'
             } 
-            else {
-                resultado = 'Jogador dois ganhou!'
-            }
+            
            setResposta(resultado)
             
         } catch (err) {
