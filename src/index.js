@@ -14,12 +14,14 @@ import OrcamentoFamiliar from './pages/orcamentoFamiliar';
 import ContarAte from './pages/contarAte';
 import Desenhar from './pages/linhaAsterisco'
 import Retangulo from './pages/desenharRetangulo';
+import Home from './pages/home';
+import ImparOuPar from './pages/imparOuPar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AcaiPage/>} />
+        <Route path="/acai" element={<AcaiPage/>} />
         <Route path="/libra" element={<LibraPage/>} />
         <Route path="/sorveteria" element={<Sorveteria/>} />
         <Route path="/abastecimento" element={<Abastecimento/>}/>
@@ -30,6 +32,8 @@ root.render(
         <Route path="/contar" element={<ContarAte/>}/>
         <Route path="/desenharAsterisco" element={<Desenhar/>}/>
         <Route path="/Retangulo" element={<Retangulo/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/imparoupar" element={<ImparOuPar/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
