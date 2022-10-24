@@ -16,6 +16,7 @@ import Desenhar from './pages/linhaAsterisco'
 import Retangulo from './pages/desenharRetangulo';
 import Home from './pages/home';
 import ImparOuPar from './pages/imparOuPar';
+import Jokenpo from './pages/jokenpo'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -34,6 +35,8 @@ root.render(
         <Route path="/Retangulo" element={<Retangulo/>}/>
         <Route path="/" element={<Home/>}/>
         <Route path="/imparoupar" element={<ImparOuPar/>}/>
+        <Route path="/Jokenpo" element={<Jokenpo/>}/>
+  
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
