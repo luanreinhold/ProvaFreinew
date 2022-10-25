@@ -17,6 +17,7 @@ import Retangulo from './pages/desenharRetangulo';
 import Home from './pages/home';
 import ImparOuPar from './pages/imparOuPar';
 import Jokenpo from './pages/jokenpo'
+import AlunoMedia from './pages/AlunosMedia';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -36,6 +37,7 @@ root.render(
         <Route path="/" element={<Home/>}/>
         <Route path="/imparoupar" element={<ImparOuPar/>}/>
         <Route path="/Jokenpo" element={<Jokenpo/>}/>
+        <Route path="/Media" element={<AlunoMedia/>}/>
   
       </Routes>
     </BrowserRouter>
