@@ -12,20 +12,17 @@ function radomNumber(){
         if(usuario === numeroAleatorio){
             msg = 'acertou'
             console.log(msg)
-            console.log(numeroAleatorio)
+            break;
         }
         else if(usuario > numeroAleatorio){
             msg = 'menor'
             console.log(msg)
-            console.log(numeroAleatorio)
         }else if (usuario < numeroAleatorio){
             msg = 'maior'
             console.log(msg)
-            console.log(numeroAleatorio)
         }else{
             msg = 'acabou as tentativas'
             console.log(msg)
-            console.log(numeroAleatorio)
         }
     }
     
